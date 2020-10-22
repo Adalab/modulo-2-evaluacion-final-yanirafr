@@ -1,19 +1,20 @@
 "use strict";
 
+let browsedMovies = [];
 const favMovies = [];
-
+const favList = document.querySelector(".favourite__list");
 const movieList = document.querySelector(".js-list");
 
 function selectFavourite(ev) {
-  ev.target.classList.add("selected");
-  favMovies.push(ev.target);
+  ev.currentTarget.classList.add("selected");
   console.log(favMovies);
-  console.log(movieList);
 }
 
-function showFavourite() {
-  const favList = document.querySelector(".favourite__list");
-  for (let movie of favMovies) {
-    favList.innerHTML += movie;
+function addListener() {
+  const movies = document.querySelectorAll(".js-movie");
+  console.log(movies);
+  for (const movie of movies) {
+    console.log(movie);
+    movie.addEventListener("click", selectFavourite);
   }
 }

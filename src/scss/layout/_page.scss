@@ -11,17 +11,11 @@
       width: 280px;
       margin: 10px;
       display: inline-block;
-    }
-    &__box {
       background-color: royalblue;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
     }
   }
 }
 
 .selected {
-  color: red;
+  background-color: saddlebrown;
 }

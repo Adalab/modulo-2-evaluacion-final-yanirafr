@@ -13,22 +13,25 @@ function getMovie() {
     })
     .then(function (data) {
       // Add list item
-      for (let i = 0; i < data.length; i++) {
-        movieList.innerHTML += `<li class="js-movie${i} movie__list__item"><div class="movie__list__box"><img class="js-movie-img${i} movie__list__img" src="" alt="${data[i].show.name}" title="${data[i].show.name}">${data[i].show.name}</div></li>`;
-        if (data[i].show.image === null) {
-          document.querySelector(`.js-movie-img${i}`).src =
-            "https://via.placeholder.com/210x295/ffffff/666666/?text=Image";
-        } else {
-          const listItem = document.querySelector(`.js-movie-img${i}`);
-          listItem.src = `${data[i].show.image.medium}`;
-        }
-      }
-      movieList.addEventListener("click", selectFavourite);
-      //   addListItem();
+      browsedMovies = data;
+      addListItem();
+      addListener();
     });
 }
 
 // Button event listener
 btn.addEventListener("click", getMovie);
 
-// function addListItem() {}
+function addListItem() {
+  for (let i = 0; i < browsedMovies.length; i++) {
+    movieList.innerHTML += `<li class="js-movie js-movie${i} movie__list__item"><img class="js-movie-img${i} movie__list__img" src="" alt="${browsedMovies[i].show.name}" title="${browsedMovies[i].show.name}">${browsedMovies[i].show.name}</li>`;
+    if (browsedMovies[i].show.image === null) {
+      document.querySelector(`.js-movie-img${i}`).src =
+        "https://via.placeholder.com/210x295/ffffff/666666/?text=Image";
+    } else {
+      const listItem = document.querySelector(`.js-movie-img${i}`);
+      listItem.src = `${browsedMovies[i].show.image.medium}`;
+    }
+    // movieList.addEventListener("click", selectFavourite);
+  }
+}
