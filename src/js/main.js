@@ -24,7 +24,6 @@ function getMovie() {
         }
       }
       movieList.addEventListener("click", selectFavourite);
-      console.log(movieList);
       //   addListItem();
     });
 }

@@ -1,11 +1,19 @@
 "use strict";
 
-const favMovies = [{ title: "", image: "" }];
+const favMovies = [];
 
 const movieList = document.querySelector(".js-list");
 
 function selectFavourite(ev) {
-  ev.currentTarget.classList.add("selected");
+  ev.target.classList.add("selected");
   favMovies.push(ev.target);
   console.log(favMovies);
+  console.log(movieList);
+}
+
+function showFavourite() {
+  const favList = document.querySelector(".favourite__list");
+  for (let movie of favMovies) {
+    favList.innerHTML += movie;
+  }
 }
