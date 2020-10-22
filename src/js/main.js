@@ -18,7 +18,7 @@ function getMovie() {
         movieList.innerHTML += `<li class="js-movie${i}"><img class="js-movie-img${i} src="" alt="${data[i].show.name}" title="${data[i].show.name}">${data[i].show.name}</li>`;
         if (data[i].show.image === null) {
           document.querySelector(`.js-movie-img${i}`).src =
-            "https://i.kym-cdn.com/entries/icons/original/000/027/475/Screen_Shot_2018-10-25_at_11.02.15_AM.png";
+            "https://via.placeholder.com/210x295/ffffff/666666/?text=Image";
           console.log(data[i].show.name, " en el if");
         } else {
           const listItem = document.querySelector(`.js-movie-img${i}`);
