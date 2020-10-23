@@ -32,8 +32,10 @@ function addListener() {
 
 // Add favourites to list
 function addFavourite() {
+  let favMovieList = "";
   for (const movie of favMovies) {
-    favList.innerHTML = `<li>${movie}<li>`;
-    console.log("for", movie);
+    favMovieList += `<li>${movie}<li>`;
+    // console.log("for", movie);
   }
+  favList.innerHTML = favMovieList;
 }
