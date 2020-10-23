@@ -24,11 +24,13 @@ function selectFavourite(ev) {
     const removeFav = favMovies.find(
       (currentMovie) => currentMovie.show.id === favMoviesId
     );
-    favMovies.splice(removeFav, 1);
+    const favIndex = favMovies.indexOf(removeFav);
+    favMovies.splice(favIndex, 1);
     localStorage.setItem(`movies`, JSON.stringify(favMovies));
   }
   addFavourite();
-  console.log(localStorage);
+  getMovie();
+  addListItem();
 }
 
 // Movies event listener
@@ -43,7 +45,7 @@ function addListener() {
 function addFavourite() {
   let favMovieList = "";
   for (let i = 0; i < favMovies.length; i++) {
-    favMovieList += `<li class="js-fav-item js-fav${i} favourite__list__item" id=${favMovies[i].show.id}1>`;
+    favMovieList += `<li class="js-fav-item js-fav${i} favourite__list__item">`;
     favMovieList += `<img class="js-fav-img${i} favourite__list__img" `;
     if (favMovies[i].show.image === null) {
       favMovieList += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;
@@ -52,7 +54,7 @@ function addFavourite() {
     }
     favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
     favMovieList += favMovies[i].show.name;
-    favMovieList += `<button class="delete__btn js-delete-btn">X</button>`;
+    favMovieList += `<button class="delete__btn js-delete-btn" id=${favMovies[i].show.id}>X</button>`;
     favMovieList += `<li>`;
   }
   favList.innerHTML = favMovieList;
