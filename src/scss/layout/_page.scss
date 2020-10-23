@@ -23,6 +23,7 @@ body {
     font-weight: bold;
     @media (min-width: 768px) {
       flex-direction: row;
+      margin: 0 30px;
     }
     &__search {
       @media (min-width: 768px) {
@@ -104,15 +105,17 @@ body {
   &__container {
     width: 100%;
     text-align: center;
+    padding: 15px 0;
   }
   &__list {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
     &__item {
-      margin: 10px;
-
       margin: 10px 0;
       background-color: $color-primary;
       border-radius: 10px;
@@ -121,7 +124,7 @@ body {
       align-items: center;
       padding: 10px 0;
       @media (min-width: 768px) {
-        width: 240px;
+        margin: 10px 10px;
       }
     }
     &__img {
