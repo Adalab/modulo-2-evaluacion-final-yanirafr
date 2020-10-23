@@ -21,14 +21,3 @@ function addRemoveListener() {
     movie.addEventListener("click", removeFavourite, removeClass);
   }
 }
-
-// Class remove
-
-function removeClass(ev) {
-  const favMoviesId = parseInt(ev.currentTarget.id);
-  console.log(favMoviesId);
-  //Duda
-  const favSelected = document.getElementById(`${favMoviesId}`);
-
-  console.log("selected ", favSelected);
-}
