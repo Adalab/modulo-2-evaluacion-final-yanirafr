@@ -50,11 +50,13 @@ function addFavourite() {
   let favMovieList = "";
   for (let i = 0; i < favMovies.length; i++) {
     favMovieList += `<li class="js-fav-item js-fav${i} favourite__list__item" id=${favMovies[i].show.id}1>`;
-    if (true) {
-      favMovieList += `<img class="js-fav-img${i} favourite__list__img" src="${favMovies[i].show.image.medium}" alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
+    favMovieList += `<img class="js-fav-img${i} favourite__list__img" `;
+    if (favMovies[i].show.image === null) {
+      favMovieList += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;
     } else {
-      favMovieList += `<img class="js-fav-img${i} favourite__list__img" src="${favMovies[i].show.image.medium}" alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
+      favMovieList += `src="${favMovies[i].show.image.medium}"`;
     }
+    favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
     favMovieList += favMovies[i].show.name;
     favMovieList += `<li>`;
 
