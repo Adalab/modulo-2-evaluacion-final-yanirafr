@@ -9,9 +9,11 @@ getMoviesFromLocal();
 
 function getMoviesFromLocal() {
   const getLocal = JSON.parse(localStorage.getItem("movies"));
-  favMovies = getLocal;
-  console.log("fav array", favMovies);
-  addFavourite();
+  if (getLocal !== null) {
+    favMovies = getLocal;
+    console.log("fav array", favMovies);
+    addFavourite();
+  }
 }
 
 console.log("Local", localStorage);
