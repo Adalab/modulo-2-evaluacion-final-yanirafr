@@ -52,6 +52,7 @@ function addFavourite() {
     }
     favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
     favMovieList += favMovies[i].show.name;
+    favMovieList += `<button class="delete__btn js-delete-btn">X</button>`;
     favMovieList += `<li>`;
   }
   favList.innerHTML = favMovieList;
