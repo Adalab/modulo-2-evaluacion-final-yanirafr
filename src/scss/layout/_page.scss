@@ -1,10 +1,25 @@
 .main__box {
   display: flex;
+  justify-content: space-around;
+  &__search {
+    width: 200px;
+  }
+}
+
+.search {
+  display: flex;
+  &__btn {
+    margin: 0 5px;
+    background-color: rgb(230, 22, 56);
+    border: none;
+    color: white;
+  }
 }
 
 .movie {
   &__container {
     background-color: pink;
+    width: 70%;
   }
   &__list {
     &__item {
