@@ -32,6 +32,7 @@ const delButton = document.querySelector(".js-delete-all");
 
 function deleteAll() {
   favMovies = [];
+  localStorage.clear();
   addFavourite();
   getMovie();
 }
