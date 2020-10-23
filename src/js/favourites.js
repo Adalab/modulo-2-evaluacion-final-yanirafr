@@ -24,7 +24,8 @@ function selectFavourite(ev) {
     const removeFav = favMovies.find(
       (currentMovie) => currentMovie.show.id === favMoviesId
     );
-    favMovies.splice(removeFav, 1);
+    const favIndex = favMovies.indexOf(removeFav);
+    favMovies.splice(favIndex, 1);
     localStorage.setItem(`movies`, JSON.stringify(favMovies));
   }
   addFavourite();

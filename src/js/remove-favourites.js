@@ -7,9 +7,8 @@ function removeFavourite(ev) {
   const foundMovie = browsedMovies.find(
     (currentMovie) => currentMovie.show.id === favMoviesId
   );
-
-  console.log(favMoviesId);
-  favMovies.splice(foundMovie, 1);
+  const favIndex = favMovies.indexOf(foundMovie);
+  favMovies.splice(favIndex, 1);
   localStorage.setItem(`movies`, JSON.stringify(favMovies));
 
   addFavourite();
