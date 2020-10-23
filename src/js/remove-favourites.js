@@ -10,6 +10,7 @@ function removeFavourite(ev) {
 
   console.log(favMoviesId);
   favMovies.splice(foundMovie, 1);
+  localStorage.setItem(`movies`, JSON.stringify(favMovies));
 
   addFavourite();
 }
