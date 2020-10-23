@@ -4,8 +4,6 @@
 
 const btn = document.querySelector(".js-btn");
 
-getMovie();
-
 // Fetch function
 function getMovie() {
   const input = document.querySelector(".js-input").value;
@@ -18,7 +16,7 @@ function getMovie() {
       browsedMovies = data;
       addListItem();
       addListener();
-      console.log(browsedMovies);
+      console.log("BROWSED", browsedMovies);
     });
 }
 

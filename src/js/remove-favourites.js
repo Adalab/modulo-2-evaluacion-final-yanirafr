@@ -16,19 +16,8 @@ function removeFavourite(ev) {
 
 // Remove listener
 function addRemoveListener() {
-  const movies = document.querySelectorAll(".js-fav-item");
+  const movies = document.querySelectorAll(".js-delete-btn");
   for (const movie of movies) {
-    movie.addEventListener("click", removeFavourite, removeClass);
+    movie.addEventListener("click", removeFavourite);
   }
-}
-
-// Class remove
-
-function removeClass(ev) {
-  const favMoviesId = parseInt(ev.currentTarget.id);
-  console.log(favMoviesId);
-  //Duda
-  const favSelected = document.getElementById(`${favMoviesId}`);
-
-  console.log("selected ", favSelected);
 }
