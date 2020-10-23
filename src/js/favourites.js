@@ -1,9 +1,5 @@
 "use strict";
 
-// Movie Arrays
-let browsedMovies = [];
-const favMovies = [];
-
 // Query selectors
 const favList = document.querySelector(".js-fav");
 const movieList = document.querySelector(".js-list");
@@ -22,7 +18,7 @@ function selectFavourite(ev) {
       (currentMovie) => currentMovie.show.id === favMoviesId
     );
     favMovies.push(addFav);
-    localStorage.setItem(`movies`, JSON.stringify(favMovies));
+    localStorage.setItem("movies", JSON.stringify(favMovies));
   } else {
     // Remove
     const removeFav = favMovies.find(
