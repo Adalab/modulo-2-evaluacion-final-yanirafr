@@ -1,7 +1,10 @@
+body {
+  background-color: $color-tertiary;
+}
+
 .header {
   width: 100%;
   text-align: center;
-  background-color: $color-tertiary;
   color: $color-secondary;
   &__title {
     font-family: "Courier New", Courier, monospace;
@@ -12,7 +15,6 @@
 
 .main {
   &__box {
-    background-color: $color-tertiary;
     display: flex;
     justify-content: space-between;
     width: 100%;

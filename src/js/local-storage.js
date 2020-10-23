@@ -4,7 +4,6 @@
 let browsedMovies = [];
 let favMovies = [];
 
-getMovie();
 getMoviesFromLocal();
 
 function getMoviesFromLocal() {
