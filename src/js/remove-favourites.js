@@ -18,6 +18,6 @@ function removeFavourite(ev) {
 function addRemoveListener() {
   const movies = document.querySelectorAll(".js-delete-btn");
   for (const movie of movies) {
-    movie.addEventListener("click", removeFavourite, removeClass);
+    movie.addEventListener("click", removeFavourite);
   }
 }
