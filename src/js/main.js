@@ -16,7 +16,6 @@ function getMovie() {
       browsedMovies = data;
       addListItem();
       addListener();
-      console.log("BROWSED", browsedMovies);
     });
 }
 
@@ -30,11 +29,23 @@ function addListItem() {
     let movie = "";
     movie += `<li `;
     movie += `class="`;
+    // Add selected class
+    const favMoviesId = parseInt(browsedMovies[i].show.id);
+    const foundFav = favMovies.find(
+      (currentMovie) => currentMovie.show.id === favMoviesId
+    );
+    console.log(foundFav);
+    if (foundFav === undefined) {
+      movie += ``;
+      console.log("en el if");
+    } else {
+      movie += `selected `;
+      console.log("en el else");
+    }
+    //
     movie += `js-movie js-movie${i} movie__list__item" id="${browsedMovies[i].show.id}">`;
     movie += `<img class="`;
-    // Add selected class
     movie += `js-movie-img${i} movie__list__img" `;
-
     // Add image
     if (browsedMovies[i].show.image === null) {
       movie += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;

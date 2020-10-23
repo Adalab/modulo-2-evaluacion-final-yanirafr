@@ -12,5 +12,7 @@ function getMoviesFromLocal() {
   if (getLocal !== null) {
     favMovies = getLocal;
     addFavourite();
+  } else {
+    favMovies = [];
   }
 }
