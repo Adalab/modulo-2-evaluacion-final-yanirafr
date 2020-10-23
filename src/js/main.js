@@ -26,15 +26,20 @@ function getMovie() {
 btn.addEventListener("click", getMovie);
 
 function addListItem() {
-  movieList.innerHTML = "";
   for (let i = 0; i < browsedMovies.length; i++) {
-    movieList.innerHTML += `<li class="js-movie js-movie${i} movie__list__item" id=${browsedMovies[i].show.id}><img class="js-movie-img${i} movie__list__img" src="" alt="${browsedMovies[i].show.name}" title="${browsedMovies[i].show.name}">${browsedMovies[i].show.name}</li>`;
-    if (browsedMovies[i].show.image === null) {
-      document.querySelector(`.js-movie-img${i}`).src =
-        "https://via.placeholder.com/210x295/ffffff/666666/?text=Image";
+    // si la serie actual está en fav añado la clase
+    let movie = "";
+    movie += `<li class="js-movie js-movie${i} movie__list__item" id="${browsedMovies[i].show.id}">`;
+    movie += `<img class="js-movie-img${i} movie__list__img" `;
+    if (browsedMovies[i].show.image.medium === null) {
+      movie += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;
     } else {
-      const listItem = document.querySelector(`.js-movie-img${i}`);
-      listItem.src = `${browsedMovies[i].show.image.medium}`;
+      movie += `src = ${browsedMovies[i].show.image.medium}`;
     }
+    movie += ` alt="${browsedMovies[i].show.name}" title="${browsedMovies[i].show.name}">`;
+    movie += `${browsedMovies[i].show.name}</li>`;
+    console.log(movie);
+
+    movieList.innerHTML += movie;
   }
 }

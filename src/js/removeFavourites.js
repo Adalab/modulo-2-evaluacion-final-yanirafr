@@ -7,7 +7,8 @@ function removeFavourite(ev) {
   const foundMovie = browsedMovies.find(
     (currentMovie) => currentMovie.show.id === favMoviesId
   );
-  console.log(foundMovie);
+
+  console.log(favMoviesId);
   favMovies.splice(foundMovie, 1);
 
   addFavourite();
@@ -17,6 +18,17 @@ function removeFavourite(ev) {
 function addRemoveListener() {
   const movies = document.querySelectorAll(".js-fav-item");
   for (const movie of movies) {
-    movie.addEventListener("click", removeFavourite);
+    movie.addEventListener("click", removeFavourite, removeClass);
   }
+}
+
+// Class remove
+
+function removeClass(ev) {
+  const favMoviesId = parseInt(ev.currentTarget.id);
+  console.log(favMoviesId);
+  //Duda
+  const favSelected = document.getElementById(`${favMoviesId}`);
+
+  console.log("selected ", favSelected);
 }

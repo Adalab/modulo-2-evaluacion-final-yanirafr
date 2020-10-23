@@ -23,6 +23,7 @@ function selectFavourite(ev) {
     );
     ev.currentTarget.classList.add("selected");
     favMovies.push(addFav);
+    localStorage.setItem(`movies`, JSON.stringify(favMovies));
   } else {
     // Remove
     const removeFav = favMovies.find(
@@ -30,8 +31,10 @@ function selectFavourite(ev) {
     );
     ev.currentTarget.classList.remove("selected");
     favMovies.splice(removeFav, 1);
+    localStorage.setItem(`movies`, JSON.stringify(favMovies));
   }
   addFavourite();
+  console.log(localStorage);
 }
 
 // Movies event listener
@@ -46,10 +49,18 @@ function addListener() {
 function addFavourite() {
   let favMovieList = "";
   for (let i = 0; i < favMovies.length; i++) {
-    favMovieList += `<li class="js-fav-item js-fav${i} favourite__list__item" id=${favMovies[i].show.id}><img class="js-fav-img${i} favourite__list__img" src="" alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">${favMovies[i].show.name}<li>`;
+    favMovieList += `<li class="js-fav-item js-fav${i} favourite__list__item" id=${favMovies[i].show.id}1>`;
+    if (true) {
+      favMovieList += `<img class="js-fav-img${i} favourite__list__img" src="${favMovies[i].show.image.medium}" alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
+    } else {
+      favMovieList += `<img class="js-fav-img${i} favourite__list__img" src="${favMovies[i].show.image.medium}" alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
+    }
+    favMovieList += favMovies[i].show.name;
+    favMovieList += `<li>`;
 
-    const favMovieImg = document.querySelector(`.js-fav-img${i}`);
+    //const favMovieImg = document.querySelector(`.js-fav-img${i}`);
 
+    //Duda
     // console.log(favMovieList);
     // console.log(favMovieImg);
 
