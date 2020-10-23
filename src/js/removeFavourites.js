@@ -12,6 +12,7 @@ function removeFavourite(ev) {
   favMovies.splice(foundMovie, 1);
 
   addFavourite();
+  addListItem();
 }
 
 // Remove listener
