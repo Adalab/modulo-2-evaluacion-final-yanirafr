@@ -13,6 +13,8 @@ function removeFavourite(ev) {
   localStorage.setItem(`movies`, JSON.stringify(favMovies));
 
   addFavourite();
+  getMovie();
+  addListItem();
 }
 
 // Remove listener

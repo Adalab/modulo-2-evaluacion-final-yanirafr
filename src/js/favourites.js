@@ -29,6 +29,8 @@ function selectFavourite(ev) {
     localStorage.setItem(`movies`, JSON.stringify(favMovies));
   }
   addFavourite();
+  getMovie();
+  addListItem();
 }
 
 // Movies event listener
