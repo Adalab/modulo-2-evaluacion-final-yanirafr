@@ -9,7 +9,7 @@ getMovie();
 // Fetch function
 function getMovie() {
   const input = document.querySelector(".js-input").value;
-  fetch(`http://api.tvmaze.com/search/shows?q=${input}`)
+  fetch(`//api.tvmaze.com/search/shows?q=${input}`)
     .then(function (response) {
       return response.json();
     })
