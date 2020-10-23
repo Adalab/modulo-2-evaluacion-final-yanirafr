@@ -11,18 +11,25 @@ const movieList = document.querySelector(".js-list");
 // Select Favourites
 function selectFavourite(ev) {
   const favMoviesId = parseInt(ev.currentTarget.id);
-  console.log("right", favMoviesId);
 
-  const foundMovie = browsedMovies.find(
+  const foundFav = favMovies.find(
     (currentMovie) => currentMovie.show.id === favMoviesId
   );
 
-  if (ev.currentTarget.classList.contains("selected")) {
-    ev.currentTarget.classList.remove("selected");
-    favMovies.splice(foundMovie, 1);
-  } else {
+  if (foundFav === undefined) {
+    // Add
+    const addFav = browsedMovies.find(
+      (currentMovie) => currentMovie.show.id === favMoviesId
+    );
     ev.currentTarget.classList.add("selected");
-    favMovies.push(foundMovie);
+    favMovies.push(addFav);
+  } else {
+    // Remove
+    const removeFav = favMovies.find(
+      (currentMovie) => currentMovie.show.id === favMoviesId
+    );
+    ev.currentTarget.classList.remove("selected");
+    favMovies.splice(removeFav, 1);
   }
   addFavourite();
 }
