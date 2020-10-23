@@ -4,8 +4,9 @@ body {
 
 .header {
   width: 100%;
-  text-align: center;
   color: $color-secondary;
+  padding: 0 20px;
+  text-align: center;
   &__title {
     font-family: "Courier New", Courier, monospace;
     font-size: 40px;
@@ -14,14 +15,19 @@ body {
 }
 
 .main {
+  width: 100%;
   &__box {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    width: 100%;
     font-weight: bold;
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
     &__search {
-      width: 500px;
-      margin: 0 10px;
+      @media (min-width: 768px) {
+        width: 500px;
+      }
     }
   }
 }
@@ -31,27 +37,31 @@ body {
   padding: 20px 5px;
   display: flex;
   justify-content: space-between;
+  margin: 0 10px;
   &__input {
-    width: 240px;
+    width: 100%;
     border-radius: 10px;
     border: none;
+    padding: 0 10px;
+    font-size: 16px;
   }
   &__btn {
     width: 100px;
-    padding: 5px;
+    padding: 5px 30px;
     margin-left: 10px;
     background-color: $color-primary;
     border-radius: 10px;
     border: none;
-    color: white;
+    color: $white;
   }
 }
 
 .favourite {
   text-align: center;
-  background-color: white;
+  background-color: $white;
   border-radius: 15px;
   padding: 20px 5px;
+  margin: 0 10px;
   &__title {
     font-size: 20px;
     margin: 10px;
@@ -65,7 +75,7 @@ body {
     text-transform: uppercase;
     margin-top: 20px;
     background-color: $color-primary;
-    color: white;
+    color: $white;
   }
   &__list {
     &__item {
@@ -85,7 +95,7 @@ body {
       border: none;
       font-size: 10px;
       background-color: $color-tertiary;
-      color: white;
+      color: $white;
     }
   }
 }
@@ -93,7 +103,7 @@ body {
 .movie {
   &__container {
     width: 100%;
-    display: inline;
+    text-align: center;
   }
   &__list {
     width: 100%;
@@ -102,7 +112,7 @@ body {
     justify-content: space-around;
     &__item {
       margin: 10px;
-      width: 240px;
+
       margin: 10px 0;
       background-color: $color-primary;
       border-radius: 10px;
@@ -110,14 +120,24 @@ body {
       flex-direction: column;
       align-items: center;
       padding: 10px 0;
+      @media (min-width: 768px) {
+        width: 240px;
+      }
     }
     &__img {
       width: 170px;
       margin-bottom: 10px;
+    }
+    &__name {
+      margin: 0 5px;
+      width: 150px;
     }
   }
 }
 
 .selected {
   background-color: $color-secondary;
+  .movie__list__name {
+    color: $white;
+  }
 }

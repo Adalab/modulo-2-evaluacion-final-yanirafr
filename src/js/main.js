@@ -52,7 +52,7 @@ function addListItem() {
       movie += `src = ${browsedMovies[i].show.image.medium}`;
     }
     movie += ` alt="${browsedMovies[i].show.name}" title="${browsedMovies[i].show.name}">`;
-    movie += `${browsedMovies[i].show.name}`;
+    movie += `<h3 class="movie__list__name">${browsedMovies[i].show.name}</h3>`;
     movie += `</li>`;
 
     movieList.innerHTML += movie;
