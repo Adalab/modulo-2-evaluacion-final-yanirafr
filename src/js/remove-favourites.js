@@ -12,6 +12,8 @@ function removeFavourite(ev) {
   favMovies.splice(favIndex, 1);
   localStorage.setItem(`movies`, JSON.stringify(favMovies));
 
+  ev.preventDefault;
+
   addFavourite();
   getMovie();
   addListItem();
@@ -24,3 +26,15 @@ function addRemoveListener() {
     movie.addEventListener("click", removeFavourite);
   }
 }
+
+// Delete all button
+const delButton = document.querySelector(".js-delete-all");
+
+function deleteAll() {
+  favMovies = [];
+  localStorage.clear();
+  addFavourite();
+  getMovie();
+}
+
+delButton.addEventListener("click", deleteAll);

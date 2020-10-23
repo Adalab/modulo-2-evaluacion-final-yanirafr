@@ -1,42 +1,121 @@
-.main__box {
-  display: flex;
-  justify-content: space-between;
+.header {
   width: 100%;
-  &__search {
-    width: 600px;
+  text-align: center;
+  background-color: $color-tertiary;
+  color: $color-secondary;
+  &__title {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 40px;
+    padding: 20px 0;
+  }
+}
+
+.main {
+  &__box {
+    background-color: $color-tertiary;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: bold;
+    &__search {
+      width: 500px;
+      margin: 0 10px;
+    }
   }
 }
 
 .search {
+  height: 80px;
+  padding: 20px 5px;
   display: flex;
+  justify-content: space-between;
+  &__input {
+    width: 240px;
+    border-radius: 10px;
+    border: none;
+  }
   &__btn {
-    margin: 0 5px;
-    background-color: rgb(230, 22, 56);
+    width: 100px;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: $color-primary;
+    border-radius: 10px;
     border: none;
     color: white;
   }
 }
 
-.movie {
-  &__container {
-    background-color: pink;
+.favourite {
+  text-align: center;
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px 5px;
+  &__title {
+    font-size: 20px;
+    margin: 10px;
+  }
+  &__button {
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    background-color: $color-primary;
+    color: white;
   }
   &__list {
+    &__item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 5px;
+    }
+    &__img {
+      height: 100px;
+    }
+    &__btn {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+      border-radius: 50%;
+      border: none;
+      font-size: 10px;
+      background-color: $color-tertiary;
+      color: white;
+    }
+  }
+}
+
+.movie {
+  &__container {
+    width: 100%;
+    display: inline;
+  }
+  &__list {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     &__item {
-      width: 280px;
+      margin: 10px;
+      width: 240px;
       margin: 10px 0;
-      background-color: royalblue;
+      background-color: $color-primary;
+      border-radius: 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 10px 0;
     }
+    &__img {
+      width: 170px;
+      margin-bottom: 10px;
+    }
   }
 }
 
 .selected {
-  background-color: saddlebrown;
+  background-color: $color-secondary;
 }
