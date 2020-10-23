@@ -1,8 +1,9 @@
 .main__box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 100%;
   &__search {
-    width: 200px;
+    width: 600px;
   }
 }
 
@@ -19,14 +20,19 @@
 .movie {
   &__container {
     background-color: pink;
-    width: 70%;
   }
   &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     &__item {
       width: 280px;
-      margin: 10px;
-      display: inline-block;
+      margin: 10px 0;
       background-color: royalblue;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
     }
   }
 }

@@ -34,8 +34,9 @@ function addListItem() {
     movie += `class="`;
     movie += `js-movie js-movie${i} movie__list__item" id="${browsedMovies[i].show.id}">`;
     movie += `<img class="`;
-    // Add class
+    // Add selected class
     movie += `js-movie-img${i} movie__list__img" `;
+
     // Add image
     if (browsedMovies[i].show.image === null) {
       movie += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;
