@@ -43,24 +43,63 @@ function addListener() {
 
 // Add favourites to list
 function addFavourite() {
-  let favMovieList = "";
+  // let favMovieList = "";
   for (let i = 0; i < favMovies.length; i++) {
-    favMovieList += `<li class="js-fav-item js-fav${i} favourite__list__item">`;
-    favMovieList += `<img class="js-fav-img${i} favourite__list__img" `;
+    //List element
+    // favMovieList += `<li class="js-fav-item js-fav${i} favourite__list__item">`;
+    const favMovieList = document.createElement("li");
+    favMovieList.classList.add("js-fav-item");
+    favMovieList.classList.add(`js-fav${i}`);
+    favMovieList.classList.add("favourite__list__item");
+    
     // Add image
+    // favMovieList += `<img class="js-fav-img${i} favourite__list__img" `;
+    // favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
+    const listImg = document.createElement("img");
+    favMovieList.appendChild(listImg);
+    listImg.classList.add(`js-fav-img${i}`);
+    listImg.classList.add("favourite__list__img");
+    listImg.setAttribute("alt", `${favMovies[i].show.name}`);
+    listImg.setAttribute("title", `${favMovies[i].show.name}`);
+
     if (favMovies[i].show.image === null) {
-      favMovieList += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;
+      // favMovieList += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;
+      listImg.src = "https://via.placeholder.com/210x295/ffffff/666666/?text=Image";
     } else {
-      favMovieList += `src="${favMovies[i].show.image.medium}"`;
+      // favMovieList += `src="${favMovies[i].show.image.medium}"`;
+      listImg.src = `${favMovies[i].show.image.medium}`;
     }
-    //
-    favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
-    favMovieList += `<h3 class="favourite__list__title">${favMovies[i].show.name}</h3>`;
-    favMovieList += `<button class="favourite__list__btn js-delete-btn" id=${favMovies[i].show.id} title="Borrar">`;
-    favMovieList += `<i class="favourite__list__fav fas fa-trash-alt"></i>`;
-    favMovieList += `</button>`;
-    favMovieList += `<li>`;
+
+    // Title
+    // favMovieList += `<h3 class="favourite__list__title">${favMovies[i].show.name}</h3>`;
+    const favName = document.createElement("h3");
+    favMovieList.appendChild(favName);
+    favName.classList.add("favourite__list__title");
+    const favNameText = document.createTextNode(`${favMovies[i].show.name}`);
+    favName.appendChild(favNameText);
+
+    // Button
+    // favMovieList += `<button class="favourite__list__btn js-delete-btn" id=${favMovies[i].show.id} title="Borrar">`;
+    const favBtn = document.createElement("button");
+    favMovieList.appendChild(favBtn);
+    favBtn.setAttribute("id", `${favMovies[i].show.id}`);
+    favBtn.classList.add("favourite__list__btn");
+    favBtn.classList.add("js-delete-btn");
+    favBtn.setAttribute("title", "Borrar");
+
+    // Favicon
+    // favMovieList += `<i class="favourite__list__fav fas fa-trash-alt"></i>`;
+    const favBtnFav = document.createElement("i");
+    favBtn.appendChild(favBtnFav);
+    favBtnFav.classList.add("favourite__list__fav");
+    favBtnFav.classList.add("fas");
+    favBtnFav.classList.add("fa-trash-alt");
+    
+    // favMovieList += `</button>`;
+    // favMovieList += `<li>`;
   }
-  favList.innerHTML = favMovieList;
+  // favList.innerHTML = favMovieList;
+  favList.appendChild(favMovieList);
+
   addRemoveListener();
 }
