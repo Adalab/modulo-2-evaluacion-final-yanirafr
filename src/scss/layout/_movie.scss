@@ -1,0 +1,42 @@
+.movie {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @media (min-width: 768px) {
+      justify-content: flex-end;
+    }
+    &__item {
+      margin: 10px 0;
+      background-color: $color-primary;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 0;
+      @media (min-width: 768px) {
+        margin: 10px 10px;
+      }
+    }
+    &__img {
+      width: 170px;
+      margin-bottom: 10px;
+    }
+    &__name {
+      margin: 0 5px;
+      width: 150px;
+    }
+  }
+}
+
+.selected {
+  background-color: $color-secondary;
+  .movie__list__name {
+    color: $white;
+  }
+}
