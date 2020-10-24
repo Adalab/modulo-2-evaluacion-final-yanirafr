@@ -102,11 +102,10 @@ body {
 }
 
 .movie {
-  &__container {
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-  }
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+
   &__list {
     width: 100%;
     display: flex;
