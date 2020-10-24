@@ -27,7 +27,7 @@ function addListItem() {
   for (let i = 0; i < browsedMovies.length; i++) {
     // si la serie actual está en fav añado la clase
     let movie = "";
-    movie += `<li `;
+    movie += `<li title="${browsedMovies[i].show.name}"`;
     movie += `class="`;
     // Add selected class
     const favMoviesId = parseInt(browsedMovies[i].show.id);
