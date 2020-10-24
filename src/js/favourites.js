@@ -97,9 +97,9 @@ function addFavourite() {
     
     // favMovieList += `</button>`;
     // favMovieList += `<li>`;
+    favList.appendChild(favMovieList);
   }
   // favList.innerHTML = favMovieList;
-  favList.appendChild(favMovieList);
 
   addRemoveListener();
 }
