@@ -33,19 +33,25 @@
       justify-self: center;
       padding: 10px 0;
       cursor: pointer;
+      &:hover{
+        background-color: $color-secondary;
+        .movie__list__name{
+          color: $color-primary;
+        }
+      }
       @media (min-width: 768px) {
         margin: 0;
       }
     }
     &__img {
-      width: 120px;
+      width: 130px;
       margin-bottom: 10px;
       border-radius: 5px;
     }
     &__name {
       padding: 0 5px;
       width: 150px;
-      color: $color-secondary;
+      color: $white;
       font-size: 16px;
       margin: auto;
     }
@@ -53,11 +59,8 @@
 }
 
 .selected {
-  background-color: $color-secondary;
+  background-color: $white;
   box-shadow: 3px 3px $color-primary;
-  @media (min-width: 768px){
-    transform: translate(10px 10px);
-  }
   .movie__list__name {
     color: $color-primary;
     text-shadow: 1px 1px $color-tertiary-light;

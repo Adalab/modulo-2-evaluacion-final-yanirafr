@@ -21,6 +21,13 @@
   color: $white;
   cursor: pointer;
   font-weight: 600;
+  &:hover{
+    background-color: $white;
+    color: $color-primary;
+    box-shadow: 3px 3px $color-primary;
+    border: solid $color-primary 4px;
+    font-weight: 700;
+  }
 }
 &__list {
   @media (min-width: 768px) {
@@ -42,17 +49,23 @@
     &__title {
       font-size: 14px;
       padding: 10px;
+      margin-left: 5px;
     }
     &__btn {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
       background-color: transparent;
-      margin-right: 20px;
+      margin-right: 10px;
       margin-left: 10px;
       border: none;
       font-size: 10px;
       color: $white;
       cursor: pointer;
+      &:hover{
+        .favourite__list__fav{
+          color: $color-primary;
+        }
+      }
     }
     &__fav {
       font-size: 14px;
