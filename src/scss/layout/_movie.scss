@@ -7,7 +7,7 @@
     padding: 15px 10px;
     border-radius: 30px;
     background-color:$color-tertiary-light;
-    margin: 20px 0;
+    margin-top: 20px;
   }
 
   &__list {
@@ -18,7 +18,7 @@
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      gap: 15px;
     }
     @media (min-width: 1200px) {
       grid-template-columns: repeat(5, 1fr);
@@ -54,6 +54,8 @@
       color: $white;
       font-size: 16px;
       margin: auto;
+      max-height: 45px;
+      overflow: hidden;
     }
   }
 }
