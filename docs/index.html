@@ -15,29 +15,30 @@
 
   <body>
     <header class="header">
-      <h1 class="header__title"><i class="fas fa-tv"></i> Buscador de series</h1>
+      <h1 class="header__title">Buscador de series</h1>
     </header>
     <main class="main">
       <div class="main__box">
         <div class="main__box__search">
-          <div class="search">
+          <section class="search">
             <input
               type="text"
               name="search__input"
               id="search__input"
               class="search__input js-input"
+              value="game"
             />
-            <button class="search__btn js-btn">Search</button>
-          </div>
-          <div class="favourite">
+            <button class="search__btn js-btn" title="Buscar">Buscar</button>
+          </section>
+          <section class="favourite">
             <h2 class="favourite__title">Mis series favoritas</h2>
             <ul class="js-fav favourite__list"></ul>
-            <button class="favourite__button js-delete-all">Delete all</button>
-          </div>
+            <button class="favourite__button js-delete-all" title="Borrar favoritas">Borrar favoritas</button>
+          </section>
         </div>
-        <div class="movie__container">
+        <section class="movie">
           <ul class="movie__list js-list"></ul>
-        </div>
+        </section>
       </div>
     </main>
 
