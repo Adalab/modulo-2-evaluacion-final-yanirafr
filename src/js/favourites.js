@@ -49,7 +49,7 @@ function addFavourite() {
     favMovieList += `<img class="js-fav-img${i} favourite__list__img" `;
     // Add image
     if (favMovies[i].show.image === null) {
-      favMovieList += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;
+      favMovieList += `src= "https://via.placeholder.com/210x295/e4e3e380/666666/?text=Image"`;
     } else {
       favMovieList += `src="${favMovies[i].show.image.medium}"`;
     }
