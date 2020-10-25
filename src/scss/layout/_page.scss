@@ -5,17 +5,27 @@ body {
 .header {
   width: 100%;
   color: $color-secondary;
-  padding: 0 20px;
   text-align: center;
   &__title {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 40px;
+    font-size: 30px;
+    width: 200px;
+    margin: auto;
+    font-family: $font-secondary;
     padding: 20px 0;
+    text-shadow: 2px 2px $color-primary;
+    margin-top: 20px;
+    @media (min-width: 768px){
+      margin: unset;
+      width: unset;
+      font-size: 40px;
+      margin-top: 0;
+    }
   }
 }
 
 .main {
   width: 100%;
+  font-family: $font-primary;
   &__box {
     display: flex;
     flex-direction: column;

@@ -57,7 +57,7 @@ function addFavourite() {
     favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
     favMovieList += `<h3 class="favourite__list__title">${favMovies[i].show.name}</h3>`;
     favMovieList += `<button class="favourite__list__btn js-delete-btn" id=${favMovies[i].show.id} title="Borrar">`;
-    favMovieList += `<i class="favourite__list__fav fas fa-trash-alt"></i>`;
+    favMovieList += `<i class="favourite__list__fav fas fa-minus-circle"></i>`;
     favMovieList += `</button>`;
     favMovieList += `<li>`;
   }
