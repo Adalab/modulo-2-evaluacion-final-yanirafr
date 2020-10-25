@@ -57,7 +57,6 @@ function addFavourite() {
     favMovieList.classList.add("favourite__list__item");
     
     // Add image
-    // favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
     const listImg = document.createElement("img");
     favMovieList.appendChild(listImg);
     listImg.classList.add(`js-fav-img${i}`);
