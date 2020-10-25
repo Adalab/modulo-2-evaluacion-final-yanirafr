@@ -90,7 +90,7 @@ function addFavourite() {
     favBtn.appendChild(favBtnFav);
     favBtnFav.classList.add("favourite__list__fav");
     favBtnFav.classList.add("fas");
-    favBtnFav.classList.add("fa-trash-alt");
+    favBtnFav.classList.add("fa-minus-circle");
     favList.appendChild(favMovieList);
   }
 
