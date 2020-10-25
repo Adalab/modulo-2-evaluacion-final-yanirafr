@@ -31,6 +31,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     font-weight: bold;
+    margin: 0 15px;
     @media (min-width: 768px) {
       flex-direction: row;
       margin: 0 20px;
