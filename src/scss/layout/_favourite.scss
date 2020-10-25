@@ -3,7 +3,9 @@
   background-color: $white;
   border-radius: 15px;
   padding: 20px 5px;
-  margin: 0 10px;
+  @media (min-width: 768px) {
+    margin-right: 20px;
+  }
 &__title {
   font-size: 20px;
   padding: 10px;
@@ -35,7 +37,7 @@
     overflow-y: auto;
   }
   @media (min-width: 1200px) {
-    max-height: 263px;
+    max-height: 363px;
   }
   &__item {
       display: flex;
@@ -50,6 +52,9 @@
       font-size: 14px;
       padding: 10px;
       margin-left: 5px;
+      @media (min-width:768px){
+       max-width: 150px;
+    }
     }
     &__btn {
       width: 30px;
