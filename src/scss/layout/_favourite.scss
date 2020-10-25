@@ -24,8 +24,11 @@
 }
 &__list {
   @media (min-width: 768px) {
-    max-height: 263px;
+    max-height: 400px;
     overflow-y: auto;
+  }
+  @media (min-width: 1200px) {
+    max-height: 263px;
   }
   &__item {
       display: flex;
