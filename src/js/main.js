@@ -1,5 +1,5 @@
 "use strict";
-getMovie();
+
 // Query selectors
 
 const btn = document.querySelector(".js-btn");
