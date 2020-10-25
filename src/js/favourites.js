@@ -57,7 +57,6 @@ function addFavourite() {
     favMovieList.classList.add("favourite__list__item");
     
     // Add image
-    // favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
     const listImg = document.createElement("img");
     favMovieList.appendChild(listImg);
     listImg.classList.add(`js-fav-img${i}`);
@@ -70,7 +69,6 @@ function addFavourite() {
     } else {
       listImg.src = `${favMovies[i].show.image.medium}`;
     }
-<<<<<<< HEAD
 
     // Title
     const favName = document.createElement("h3");
@@ -94,15 +92,6 @@ function addFavourite() {
     favBtnFav.classList.add("fas");
     favBtnFav.classList.add("fa-trash-alt");
     favList.appendChild(favMovieList);
-=======
-    //
-    favMovieList += `alt="${favMovies[i].show.name}" title="${favMovies[i].show.name}">`;
-    favMovieList += `<h3 class="favourite__list__title">${favMovies[i].show.name}</h3>`;
-    favMovieList += `<button class="favourite__list__btn js-delete-btn" id=${favMovies[i].show.id} title="Borrar">`;
-    favMovieList += `<i class="favourite__list__fav fas fa-minus-circle"></i>`;
-    favMovieList += `</button>`;
-    favMovieList += `<li>`;
->>>>>>> css
   }
 
   addRemoveListener();
