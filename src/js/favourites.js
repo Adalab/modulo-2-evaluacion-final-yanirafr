@@ -92,6 +92,8 @@ function addFavourite() {
     favBtnFav.classList.add("favourite__list__fav");
     favBtnFav.classList.add("fas");
     favBtnFav.classList.add("fa-trash-alt");
+
+    // Add to list
     favList.appendChild(favMovieList);
   }
 
