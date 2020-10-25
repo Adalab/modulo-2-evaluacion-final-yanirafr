@@ -44,10 +44,14 @@ function addListener() {
 // Add favourites to list
 function addFavourite() {
   favList.innerHTML = "";
-  // for (let i = 0; i < favMovies.length; i++){
-  //   console.log(`js-fav${i}`);
-  //   const removeFav = document.querySelector(`.js-fav${i}`)
-  //   console.log(document.querySelector(`.js-fav${i}`));
+  // for (let i = 0; i < favList.length; i++){
+    // console.log(`js-fav${i}`);
+    // const removeFav = document.querySelector(`.js-fav${i}`)
+    // console.log("query", document.querySelector(`.js-fav${i}`));
+    // console.log("removeFav", removeFav);
+    // favList.removeChild(removeFav);
+    // removeFav.remove();
+    // favList.removeChild(favList.lastChild);
   // }
   for (let i = 0; i < favMovies.length; i++) {
     //List element
