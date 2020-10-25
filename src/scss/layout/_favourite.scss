@@ -52,6 +52,9 @@
       font-size: 14px;
       padding: 10px;
       margin-left: 5px;
+      @media (min-width:768px){
+       max-width: 150px;
+    }
     }
     &__btn {
       width: 30px;
