@@ -34,7 +34,7 @@ function getMovie() {
 }
 
 // Browse button event listener
-btn.addEventListener("click", getMovie);
+btn.addEventListener("submit", getMovie);
 
 // Add browsed shows function
 // This was made using innerHTML

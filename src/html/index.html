@@ -22,14 +22,16 @@
       <div class="main__box">
         <div class="main__box__search">
           <section class="search">
-            <input
-              type="text"
-              name="search__input"
-              id="search__input"
-              class="search__input js-input"
-              placeholder="Escribe tu serie";
-            />
-            <button class="search__btn js-btn" title="Buscar">Buscar</button>
+            <form class="js-input">
+              <input
+                type="text"
+                name="search__input"
+                id="search__input"
+                class="search__input"
+                placeholder="Escribe tu serie";
+              />
+              <input type="submit" class="search__btn js-btn" value="Buscar">
+            </form><!-- <button class="search__btn js-btn" title="Buscar">Buscar</button> -->
           </section>
           <section class="favourite">
             <h2 class="favourite__title">Mis series favoritas</h2>
