@@ -25,7 +25,6 @@ btn.addEventListener("click", getMovie);
 function addListItem() {
   movieList.innerHTML = "";
   for (let i = 0; i < browsedMovies.length; i++) {
-    // si la serie actual está en fav añado la clase
     let movie = "";
     movie += `<li title="${browsedMovies[i].show.name}"`;
     movie += `class="`;
