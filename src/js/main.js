@@ -34,13 +34,10 @@ function addListItem() {
     const foundFav = favMovies.find(
       (currentMovie) => currentMovie.show.id === favMoviesId
     );
-    // console.log(foundFav);
     if (foundFav === undefined) {
       movie += ``;
-      // console.log("en el if");
     } else {
       movie += `selected `;
-      // console.log("en el else");
     }
     //
     movie += `js-movie js-movie${i} movie__list__item" id="${browsedMovies[i].show.id}">`;
