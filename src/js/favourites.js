@@ -43,23 +43,17 @@ function addListener() {
 
 // Add favourites to list
 function addFavourite() {
-  favList.innerHTML = "";
-  // for (let i = 0; i < favList.length; i++){
-    // console.log(`js-fav${i}`);
-    // const removeFav = document.querySelector(`.js-fav${i}`)
-    // console.log("query", document.querySelector(`.js-fav${i}`));
-    // console.log("removeFav", removeFav);
-    // favList.removeChild(removeFav);
-    // removeFav.remove();
-    // favList.removeChild(favList.lastChild);
-  // }
+  const favItems = document.querySelectorAll(".js-fav-item");
+  for (const favItem of favItems) {
+    favItem.remove();
+  }
   for (let i = 0; i < favMovies.length; i++) {
     //List element
     const favMovieList = document.createElement("li");
     favMovieList.classList.add("js-fav-item");
     favMovieList.classList.add(`js-fav${i}`);
     favMovieList.classList.add("favourite__list__item");
-    
+
     // Add image
     const listImg = document.createElement("img");
     favMovieList.appendChild(listImg);
@@ -69,7 +63,8 @@ function addFavourite() {
     listImg.setAttribute("title", `${favMovies[i].show.name}`);
 
     if (favMovies[i].show.image === null) {
-      listImg.src = "https://via.placeholder.com/210x295/ffffff/666666/?text=Image";
+      listImg.src =
+        "https://via.placeholder.com/210x295/ffffff/666666/?text=Image";
     } else {
       listImg.src = `${favMovies[i].show.image.medium}`;
     }
