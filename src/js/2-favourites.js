@@ -1,9 +1,5 @@
 "use strict";
 
-// Query selectors
-const favList = document.querySelector(".js-fav");
-const movieList = document.querySelector(".js-list");
-
 // Select Favourites
 function selectFavourite(ev) {
   const favMoviesId = parseInt(ev.currentTarget.id);
@@ -42,6 +38,7 @@ function addListener() {
 }
 
 // Add favourites to list
+// This was made manipulating DOM elements
 function addFavourite() {
   const favItems = document.querySelectorAll(".js-fav-item");
   for (const favItem of favItems) {

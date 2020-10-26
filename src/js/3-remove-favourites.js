@@ -1,6 +1,6 @@
 "use strict";
 
-// Remove favourite from list
+// Remove favourite from list function
 function removeFavourite(ev) {
   const favMoviesId = parseInt(ev.currentTarget.id);
 
@@ -11,14 +11,14 @@ function removeFavourite(ev) {
   favMovies.splice(favIndex, 1);
   localStorage.setItem(`movies`, JSON.stringify(favMovies));
 
-  ev.preventDefault;
+  ev.preventDefault();
 
   addFavourite();
   getMovie();
   addListItem();
 }
 
-// Remove listener
+// Remove favourite listener
 function addRemoveListener() {
   const movies = document.querySelectorAll(".js-delete-btn");
   for (const movie of movies) {
@@ -26,14 +26,16 @@ function addRemoveListener() {
   }
 }
 
-// Delete all button
-const delButton = document.querySelector(".js-delete-all");
-
-function deleteAll() {
+// Delete all button function
+function deleteAll(ev) {
   favMovies = [];
   localStorage.clear();
+
+  ev.preventDefault();
+
   addFavourite();
   getMovie();
 }
 
+// Delete all button listener
 delButton.addEventListener("click", deleteAll);
