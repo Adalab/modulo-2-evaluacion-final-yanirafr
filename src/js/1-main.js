@@ -1,10 +1,24 @@
 "use strict";
 
+/* Note: getMovie() and  addFavourite() functions contain different methods for adding elements to the page.
+I decided to keep both version for the interview version.
+In the final version of a project it would be homogenized.
+You can find versions of both functions using the same method in innerHtml and DOM2 branches*/
+
+// Movie Arrays
+let browsedMovies = [];
+let favMovies = [];
+
 // Query selectors
-
+const movieList = document.querySelector(".js-list");
+const favList = document.querySelector(".js-fav");
 const btn = document.querySelector(".js-btn");
+const delButton = document.querySelector(".js-delete-all");
 
-// Fetch function
+// Startup
+getMoviesFromLocal();
+
+// Fetch shows function
 function getMovie() {
   const input = document.querySelector(".js-input").value;
   fetch(`//api.tvmaze.com/search/shows?q=${input}`)
@@ -19,13 +33,14 @@ function getMovie() {
     });
 }
 
-// Button event listener
+// Browse button event listener
 btn.addEventListener("click", getMovie);
 
+// Add browsed shows function
+// This was made using innerHTML
 function addListItem() {
   movieList.innerHTML = "";
   for (let i = 0; i < browsedMovies.length; i++) {
-    // si la serie actual está en fav añado la clase
     let movie = "";
     movie += `<li title="${browsedMovies[i].show.name}"`;
     movie += `class="`;
@@ -34,17 +49,15 @@ function addListItem() {
     const foundFav = favMovies.find(
       (currentMovie) => currentMovie.show.id === favMoviesId
     );
-    console.log(foundFav);
     if (foundFav === undefined) {
       movie += ``;
-      console.log("en el if");
     } else {
       movie += `selected `;
-      console.log("en el else");
     }
     //
     movie += `js-movie js-movie${i} movie__list__item" id="${browsedMovies[i].show.id}">`;
     movie += `<img class="js-movie-img${i} movie__list__img" `;
+
     // Add image
     if (browsedMovies[i].show.image === null) {
       movie += `src= "https://via.placeholder.com/210x295/ffffff/666666/?text=Image"`;

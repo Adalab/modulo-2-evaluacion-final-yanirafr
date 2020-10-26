@@ -1,11 +1,6 @@
 "use strict";
 
-// Movie Arrays
-let browsedMovies = [];
-let favMovies = [];
-
-getMoviesFromLocal();
-
+// Get local storage function
 function getMoviesFromLocal() {
   const getLocal = JSON.parse(localStorage.getItem("movies"));
   if (getLocal !== null) {
