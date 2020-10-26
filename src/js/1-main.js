@@ -1,8 +1,8 @@
 "use strict";
 
 /* Note: getMovie() and  addFavourite() functions contain different methods for adding elements to the page.
-I decided to keep both version for the interview version.
-In the final version of a project it would be homogenized.
+I decided to keep both version for the interview.
+In the final version of the project it would be homogenized.
 You can find versions of both functions using the same method in innerHtml and DOM2 branches*/
 
 // Movie Arrays
