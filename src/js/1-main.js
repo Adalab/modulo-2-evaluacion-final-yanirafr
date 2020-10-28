@@ -40,6 +40,21 @@ btn.addEventListener("click", getMovie);
 // This was made using innerHTML
 function addListItem() {
   movieList.innerHTML = "";
+
+  // Count
+  const count = document.querySelector(".movie");
+  const delCount = document.querySelector(".js-count");
+  if (delCount !== null) {
+    delCount.remove();
+  }
+
+  const countParagraph = document.createElement("p");
+  countParagraph.classList.add("js-count");
+  const counttext = document.createTextNode(`${browsedMovies.length}`);
+  countParagraph.appendChild(counttext);
+  count.insertBefore(countParagraph, movieList);
+  countParagraph.addEventListener("click", countGreater);
+
   for (let i = 0; i < browsedMovies.length; i++) {
     let movie = "";
     movie += `<li title="${browsedMovies[i].show.name}"`;
@@ -66,6 +81,7 @@ function addListItem() {
     }
     movie += ` alt="${browsedMovies[i].show.name}" title="${browsedMovies[i].show.name}">`;
     movie += `<h3 class="movie__list__name">${browsedMovies[i].show.name}</h3>`;
+    movie += `<p class="movie__list__paragraph">${browsedMovies[i].show.premiered}</p>`;
     movie += `</li>`;
 
     movieList.innerHTML += movie;
