@@ -6,6 +6,8 @@ This is the page I made for the **module 2: javascript final evaluation** for th
 
 We needed to make a website for browsing tv-shows and saving them into your favourite list.
 
+We later did a technical interview for the evaluation in which we were asked to implement some new features on the spot.
+
 ### Basic structure:
 
 1. Button and text field for browsing tv-shows by title.
@@ -36,6 +38,18 @@ We needed to make a website for browsing tv-shows and saving them into your favo
    - Button to remove all favourites on one click.
 2. Inprove CSS: add CSS styles.
 
-> This task was completed on 26/10/2020.
+> This task was completed on 10/26/2020.
 
-![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png)
+### Technical interview:
+During the technical interview for the evaluation I was asked for:
+1. Create a new branch, "evaluation".
+2. Add premiere date to browsed show cards.
+3. Add the number of browsed shows on top of the list.
+   - This number needs to be clickable.
+   - I was given an array with numbers.
+   - When clicked, there is a console log saying if the numbers of browsed shows is higher or lower than the numbers in the array.
+4. Merge this branch with master branch.
+
+> The technical interview was conducted on 10/28/2020.
+
+![Adalab](https://beta.adalab.es/resources/images/adalab-logo-155x61-bg-white.png).
