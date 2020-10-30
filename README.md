@@ -40,7 +40,7 @@ We later did a technical interview for the evaluation in which we were asked to 
 
 > This task was completed on 10/26/2020.
 
-### Technical interview:
+## Technical interview:
 During the technical interview for the evaluation I was asked for:
 1. Create a new branch, "evaluation".
 2. Add premiere date to browsed show cards.
