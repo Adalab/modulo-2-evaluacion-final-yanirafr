@@ -4,9 +4,9 @@
 
 This is the page I made for the **module 2: javascript final evaluation** for the **Adalab** front-end course.
 
-We needed to make a website for browsing tv-shows and saving them into your favourite list.
+We needed to make a **website for browsing tv-shows** and saving them into your **favourite list**.
 
-We later did a technical interview for the evaluation in which we were asked to implement some new features on the spot.
+We later did a **technical interview** for the evaluation in which we were asked to implement some new features on the spot.
 
 ### Basic structure:
 
@@ -36,12 +36,12 @@ We later did a technical interview for the evaluation in which we were asked to 
    - Add remove button next to each favourite to remove it from the list.
    - Remove favourite when clicking it on their browsed shows card.
    - Button to remove all favourites on one click.
-2. Inprove CSS: add CSS styles.
+2. Add CSS styles.
 
 > This task was completed on 10/26/2020.
 
 ## Technical interview:
-During the technical interview for the evaluation I was asked for:
+During the technical interview for the evaluation I was asked to:
 1. Create a new branch, "evaluation".
 2. Add premiere date to browsed show cards.
 3. Add the number of browsed shows on top of the list.
